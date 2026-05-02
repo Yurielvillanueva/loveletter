@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Letter For You 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/pin.css">
+  <link rel="stylesheet" href="css/unlock.css">
+  <link rel="stylesheet" href="css/letter.css">
+</head>
+<body>
+  <div class="phone">
+
+    <!-- SCREEN 1: LOADING -->
+    <div class="screen active" id="s-load">
+      <div class="load-icon">💌</div>
+      <div class="load-text">Loading your page...</div>
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: PIN LOCK -->
+    <div class="screen hidden" id="s-pin">
+      <div class="pin-bg"></div>
+      <div class="sun"></div>
+      <div class="grass"></div>
+      <div class="couple"></div>
+      <div class="pin-label">PIN LOCKED LOVE LETTER</div>
+      <div class="pin-title">For My Love</div>
+      <div class="pin-hint">Warning tone played. Enter the 4-digit pin.</div>
+      <div class="heart-lock">
+        <div class="heart-shackle"></div>
+        <div class="heart-body">
+          <div class="heart-inner">
+            <div class="lock-dot"></div>
+          </div>
+        </div>
+        <div class="pin-digits">
+          <input id="pin-input" class="pin-input" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="Type 4-digit PIN" aria-label="PIN input">
+          <div class="pin-input-hint">Hint: a special date for both of you.</div>
+        </div>
+      </div>
+      <button class="enter-btn" id="enter-btn">ENTER</button>
+      <div class="pin-error" id="pin-error">Wrong PIN. Try again 💔</div>
+    </div>
+
+    <!-- SCREEN 3: UNLOCKED -->
+    <div class="screen hidden" id="s-unlock">
+      <div class="unlock-label">UNLOCKED</div>
+      <div class="envelope-unlock">
+        <div class="env-body">
+          <div class="env-flap-top"></div>
+          <div class="env-flap-left"></div>
+          <div class="env-flap-right"></div>
+          <div class="env-seal"></div>
+          <div class="env-lines">
+            <div class="env-line"></div>
+            <div class="env-line"></div>
+            <div class="env-line"></div>
+          </div>
+          <div class="env-stamp"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 4: LETTER -->
+    <div class="screen hidden" id="s-letter">
+      <div class="letter-deco">
+        <div class="balloon">🎈</div>
+        <div class="balloon2">🎈</div>
+        <div class="kite">🪁</div>
+        <div class="flower">🌸</div>
+      </div>
+      <div class="letter-paper">
+        <div class="paper-lines"></div>
+        <div class="letter-date" id="l-date"></div>
+        <div class="letter-dear">Dear My CUBBYY,</div>
+        <div class="letter-underline"></div>
+        <div class="letter-text" id="l-text"></div>
+        <div class="letter-sign">
+          <div class="letter-sign-line">With love,</div>
+          <div class="letter-sign-name">Jo 😘💝</div>
+        </div>
+      </div>
+      <button class="gift-open-btn" id="gift-open-btn" type="button">Open Gift</button>
+      <div class="gift-modal hidden" id="gift-modal">
+        <div class="gift-card">
+          <div class="gift-title">Your Wish List</div>
+          <div class="gift-subtitle">Write up to 5 wishes, then send it.</div>
+          <div class="wish-list" id="wish-list">
+            <input class="wish-input" type="text" maxlength="120" placeholder="Wish #1">
+            <input class="wish-input" type="text" maxlength="120" placeholder="Wish #2">
+            <input class="wish-input" type="text" maxlength="120" placeholder="Wish #3">
+          </div>
+          <div class="gift-actions">
+            <button class="gift-btn ghost" id="gift-add-btn" type="button">Add Wish</button>
+            <button class="gift-btn" id="gift-send-btn" type="button">Send To Gmail</button>
+          </div>
+          <button class="gift-close-btn" id="gift-close-btn" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 5: CLOSING -->
+    <div class="screen hidden" id="s-close">
+      <div class="close-wrap">
+        <div class="close-heart">&#x1F49D;</div>
+        <div class="close-title" id="close-title">Thank You, Love</div>
+        <div class="close-text" id="close-text">Your wishes were packed with love. See you soon.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/screen.js"></script>
+  <script src="js/pin.js"></script>
+  <script src="js/letter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
